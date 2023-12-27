@@ -1,0 +1,181 @@
+.helper-p1 {
+    font-size: 36px;
+    line-height: 54px;
+}
+
+.helper-p2 {
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.helper-p3 {
+    font-size: 26px;
+    line-height: 48px;
+}
+
+.helper-p4 {
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.helper-p5 {
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.helper-p6 {
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.helper-p7 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.helper-h1 {
+    font-size: 60px;
+    line-height: 90px;
+}
+
+.helper-h2 {
+    font-size: 48px;
+    line-height: 72px;
+}
+
+.helper-h3 {
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.helper-h4 {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.helper-h5 {
+    font-size: 22px;
+    line-height: 33px;
+}
+
+.buttonComp {
+    background: var(--gradient-secondary);
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    width: 250px;
+    height: 60px;
+}
+
+.inputfield {
+    width: 100%;
+
+
+}
+
+.inputfield label {
+    cursor: pointer;
+}
+
+.inputfield input {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 2px;
+}
+
+.inputfield input:focus,
+.inputfield input:hover {
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    transition: all 1s ease;
+
+}
+
+
+.iconCard {
+    gap: 10px;
+    border-radius: 20px;
+    padding: 40px 20px;
+    box-shadow: 0px 10px 60px 0px rgba(46, 61, 98, 0.1);
+}
+
+.gradientIconCard {
+    gap: 15px;
+}
+
+.testimonial-slider {
+    padding: 40px 0px;
+
+}
+
+.testimonial-slider .slick-slide>div {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    /* width: 75% !important; */
+    margin: 40px 20px !important;
+    padding: 0 50px;
+    min-height: 300px;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-slider .slick-dots li {
+    margin: 0px;
+}
+
+.slick-dots li.slick-active button {
+    background: linear-gradient(45deg, #F64B91, #FFC371);
+    /* Gradient color for the active dot */
+    color: transparent;
+    width: fit-content;
+    padding: 0px;
+}
+
+.testimonial-slider .slick-dots li.slick-active button:before {
+    color: linear-gradient(45deg, #F64B91, #FFC371) !important;
+    /* content: ""; */
+}
+
+.testimonial-slider .arrows {
+    /* border: 1px solid red; */
+    top: 99%;
+    font-size: 20px;
+    font-family: "Poppins";
+    /* display: inline-block; */
+    width: fit-content;
+    position: absolute;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: white;
+    color: var(--text-light);
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.testimonial-slider .next-arrow {
+    right: 40%;
+}
+
+.testimonial-slider .prev-arrow {
+    left: 40%;
+}
+
+.testimonial-slider .next-arrow::after {
+    content: ">";
+}
+
+.testimonial-slider .prev-arrow::after {
+    content: "<";
+}
+
+.testimonial-slider .next-arrow {}
+
+.footer-section {
+    background: var(--text-dark);
+}
