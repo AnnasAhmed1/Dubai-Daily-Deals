@@ -128,6 +128,8 @@ export const P6 = ({
   textAlign,
   color,
   style,
+  onClick,
+  className,
 }) => {
   return (
     <p
@@ -139,7 +141,8 @@ export const P6 = ({
         ...style,
         ...commonStyles,
       }}
-      className="helper-p6"
+      onClick={onClick}
+      className={`helper-p6 ${className}`}
     >
       {children}
     </p>

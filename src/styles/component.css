@@ -59,12 +59,17 @@
 }
 
 .buttonComp {
-    background: var(--gradient-secondary);
     border-radius: 10px;
     text-align: center;
     border: none;
     width: 250px;
     height: 60px;
+}
+
+.rounded-buttonComp {
+    border-radius: 50px;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 .inputfield {
@@ -178,4 +183,39 @@
 
 .footer-section {
     background: var(--text-dark);
+}
+
+.partnerLogo {
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    height: 230px;
+}
+
+.faq-question {
+    transition: background-color 0.3s ease, max-height 0.3s ease;
+}
+
+.faq-question {
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.faq-answer {
+    transition: all 0.5s ease;
+}
+
+.faq-answer {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+
+}
+
+.faq-active .faq-answer {
+    padding-top: 30px;
+    max-height: 190px;
+    transition: all 0.5s ease;
 }

@@ -9,7 +9,14 @@
 button {
   border: none;
   outline: none;
+  cursor: pointer;
 }
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 
 input {
   border: none;
@@ -24,10 +31,13 @@ input {
   --gradient-primary: linear-gradient(to top right, #0695FE 0%, #F64B91 100%);
   --gradient-secondary: linear-gradient(to right, #0695FE 0%, #F64B91 100%);
 
+  --bg-light: #F9F9FC;
+  --pink-primary: #F64B91;
+  --blue-primary: #0695fe;
   --text-white: #ffffff;
   --text-dark: #1D2733;
   --text-light: #999B9F;
-  --text-blue: "#0695FE";
+  --text-blue: #0695FE;
 
 }
 

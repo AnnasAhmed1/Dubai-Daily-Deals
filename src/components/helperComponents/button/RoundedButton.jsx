@@ -1,11 +1,11 @@
 import React from "react";
-import { P6 } from "../paragraph/paragraph";
+import { P5, P6 } from "../paragraph/paragraph";
 
-const ButtonComp = ({
+const RoundedButtonComp = ({
   children,
   onClick = () => {},
   style = {},
-  color = "gradient-secondary",
+  color = "blue-primary",
   className,
 }) => {
   return (
@@ -15,11 +15,11 @@ const ButtonComp = ({
         background: `var(--${color})`,
         ...style,
       }}
-      className={`buttonComp  ${className}`}
+      className={`rounded-buttonComp  ${className}`}
     >
-      <P6 color={"text-white"}>{children}</P6>
+      <P5 color={"text-white"}>{children}</P5>
     </button>
   );
 };
 
-export default ButtonComp;
+export default RoundedButtonComp;

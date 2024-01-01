@@ -1,14 +1,13 @@
 import React from "react";
-import RoundedLogo from "./logo/RoundedLogo";
-import { P1, P6, P7 } from "./helperComponents/paragraph/paragraph";
 import facebook from "../assets/icons/facebook.svg";
 import google from "../assets/icons/google.svg";
-import twitter from "../assets/icons/twitter.svg";
 import instagram from "../assets/icons/instagram.svg";
-import ImageComp from "./helperComponents/image/imageComp";
-import InputFeilds from "./helperComponents/inputFeilds/InputFeilds";
-import FormComp from "./helperComponents/form/FormComp";
+import twitter from "../assets/icons/twitter.svg";
 import ButtonComp from "./helperComponents/button/ButtonComp";
+import FormComp from "./helperComponents/form/FormComp";
+import ImageComp from "./helperComponents/image/imageComp";
+import { P6, P7 } from "./helperComponents/paragraph/paragraph";
+import RoundedLogo from "./logo/RoundedLogo";
 
 const FooterComp = () => {
   return (
@@ -89,6 +88,7 @@ const FooterComp = () => {
                   border: "2px solid var(--text-white)",
                   borderRadius: "40px",
                   padding: "7px",
+                  cursor:"pointer"
                 }}
               />
             );
