@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { P6 } from "./helperComponents/paragraph/paragraph";
+import { P5, P6 } from "./helperComponents/paragraph/paragraph";
 
 export const Faq = ({ faq, index }) => {
   const [active, setActive] = useState(null);
@@ -12,7 +12,7 @@ export const Faq = ({ faq, index }) => {
   };
   return (
     <li key={index} className={`${active === index ? "faq-active" : null}`}>
-      <P6
+      <P5
         className="faq-question"
         weight={"700"}
         onClick={() => {
@@ -20,13 +20,13 @@ export const Faq = ({ faq, index }) => {
         }}
       >
         {faq.question}
-      </P6>
-      <P6
+      </P5>
+      <P5
         color={"text-light"}
         className={`faq-answer ${active === index ? "faq-active" : null}`}
       >
         {faq.answer}
-      </P6>
+      </P5>
     </li>
   );
 };

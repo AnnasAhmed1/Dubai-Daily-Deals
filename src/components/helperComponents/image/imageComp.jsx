@@ -16,17 +16,16 @@ const ImageComp = ({
         height,
         ...style,
       }}
-      className={`${className}`}
+      className={`imageComp ${className}`}
     >
       <img
         style={{
-          // objectFit: "contain",
           ...imageStyle,
         }}
         src={src}
         alt={alt ? alt : `${src}`}
-        width={"100%"}
-        height={"100%"}
+        className="image"
+       
       />
     </div>
   );

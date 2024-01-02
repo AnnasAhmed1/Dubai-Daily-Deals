@@ -103,6 +103,8 @@ export const P5 = ({
   underLine = false,
   textAlign,
   color,
+  onClick,
+  className,
   style,
 }) => {
   return (
@@ -115,7 +117,8 @@ export const P5 = ({
         ...style,
         ...commonStyles,
       }}
-      className="helper-p5"
+      className={`helper-p5 ${className}`}
+      onClick={onClick}
     >
       {children}
     </p>

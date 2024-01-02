@@ -11,28 +11,27 @@ import listIcon from "../../assets/icons/todo_list_icon.svg";
 import iphoneMobile from "../../assets/iphone_mobile.png";
 import iphoneMobileDisplay from "../../assets/iphone_mobile_display.png";
 import mobileDisplay from "../../assets/mobile_display1.png";
+import introVideo from "../../assets/videos/intro_video.png";
 import GradientIconCard from "../../components/GradientIconCard";
 import IconCard from "../../components/IconCard";
 import ButtonComp from "../../components/helperComponents/button/ButtonComp";
-import {
-    H1,
-    H2,
-    H3
-} from "../../components/helperComponents/heading/heading";
+import { H1, H2, H3 } from "../../components/helperComponents/heading/heading";
 import ImageComp from "../../components/helperComponents/image/imageComp";
+import { two_mobiles } from "../../assets/asset";
 import {
-    P4,
-    P5,
-    P6
+  P4,
+  P5,
+  P6,
 } from "../../components/helperComponents/paragraph/paragraph";
 import RoundedLogo from "../../components/logo/RoundedLogo";
 import Navbar from "../../components/navbar";
 
-import introVideo from "../../assets/videos/intro_video.png";
 import ContactSection from "../../components/ContactSection";
 import FooterComp from "../../components/FooterComp";
 import TestimonialSlider from "../../components/TestimonialSlider";
 import DownloadAppButton from "../../components/helperComponents/button/DownloadAppButton";
+
+import "../../styles/pages/home.css";
 
 const Home = () => {
   return (
@@ -44,7 +43,7 @@ const Home = () => {
         }}
       >
         <Navbar />
-        <div className="container flex gap-10">
+        <div className="container flex-responsive gap-10">
           <div
             className="flex-1 flex-col gap-20"
             style={{
@@ -59,23 +58,16 @@ const Home = () => {
             </P5>
             <DownloadAppButton />
           </div>
-          <ImageComp
-            src={headerImage}
-            className={"flex-1 absolute/"}
-            style={{
-              marginRight: "-80px",
-            }}
-          />
+          <ImageComp src={headerImage} className={"flex-1 home-head-image"} />
         </div>
       </section>
       <div className="container">
-        <section className="main-section list-section">
+        <section className="main-section list-section flex-col gap-40">
           <H2 textAlign={"center"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum
             dolor sit amet,
           </H2>
-          <div className="flex list-section-cards">
-            \
+          <div className="list-section-cards gap-20">
             {[1, 2, 3].map((data, index) => {
               return (
                 <IconCard
@@ -90,14 +82,15 @@ const Home = () => {
             })}
           </div>
         </section>
-        <section className="main-section qualities-section flex">
+        <section className="main-section qualities-section flex-responsive gap-30">
           <div
             style={{
-              flex: "1.5",
+              flex: "1.75",
             }}
+            className="flex-col gap-40"
           >
             <H2>The standard Lorem Ipsum passage, used since the 1500s</H2>
-            <div className="qualities-section-cards">
+            <div className="qualities-section-cards gap-30">
               <GradientIconCard />
               <GradientIconCard />
               <GradientIconCard />
@@ -111,15 +104,15 @@ const Home = () => {
             }}
           />
         </section>
-        <section className="main-section features-section flex">
+        <section className="main-section features-section flex-responsive-reverse">
           <ImageComp
             src={featureBannerImage}
             style={{
               flex: "1.3",
-              paddingRight: "30px",
+              // paddingRight: "30px",
             }}
           />
-          <div className="features-section-text flex-col flex-1">
+          <div className="features-section-text flex-col flex-1 gap-30">
             <RoundedLogo />
             <H2>Features that aren't so commonplace.</H2>
             <P6 color={"text-light"}>
@@ -130,8 +123,8 @@ const Home = () => {
             <ButtonComp>Download App</ButtonComp>
           </div>
         </section>
-        <section className="main-section sharing-section flex">
-          <div className="flex-1 flex-col sharing-section-text">
+        <section className="main-section sharing-section flex-responsive">
+          <div className="flex-1 flex-col sharing-section-text gap-20">
             <H2>Sharing Cool Stuff with Your community</H2>
             <P6 color={"text-light"}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -149,7 +142,7 @@ const Home = () => {
             </P6>
           </div>
           <div
-            className="flex-1 sharing-section-cards"
+            className="flex-1 sharing-section-cards gap-30"
             style={{
               alignItems: "center",
             }}
@@ -174,7 +167,7 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <section className="main-section app-screeshot-section flex">
+      <section className="main-section app-screeshot-section flex-responsive">
         <div
           className="app-screeshot-section-text flex-1"
           style={{
@@ -193,8 +186,8 @@ const Home = () => {
           style={{
             flex: "4",
             display: "flex",
-            gridTemplateColumns: "repeat(4,1fr)",
           }}
+          className="app-screenshots-images"
         >
           <ImageComp
             src={iphoneMobile}
@@ -202,6 +195,7 @@ const Home = () => {
             width={"200px"}
             imageStyle={{
               objectFit: "cover",
+              width: "100%",
             }}
           />
           <div
@@ -216,6 +210,7 @@ const Home = () => {
               className={"flex-1"}
               imageStyle={{
                 objectFit: "cover",
+                width: "100%",
               }}
             />
             <ImageComp
@@ -223,6 +218,7 @@ const Home = () => {
               className={"flex-1"}
               imageStyle={{
                 objectFit: "cover",
+                width: "100%",
               }}
             />
             <ImageComp
@@ -230,48 +226,43 @@ const Home = () => {
               className={"flex-1"}
               imageStyle={{
                 objectFit: "cover",
+                width: "100%",
               }}
             />
           </div>
         </div>
       </section>
       <div className="container ">
-        <section className="main-section video-section flex-col">
+        <section className="main-section video-section flex-col gap-40">
           <H1 textAlign={"center"}>
             If you're in doubt, Why Choose Dubai Daily Deals
           </H1>
           <ImageComp
             src={introVideo}
             className={"relative video-section-video"}
-            imageStyle={
-              {
-                // objectFit: "cover",
-                // borderRadius: "30px",
-              }
-            }
             style={{
               height: "550px",
-              // borderRadius: "30px",
             }}
           />
         </section>
       </div>
-      <section className="main-section">
-        <H1 textAlign={"center"}>Love of Our People</H1>
-        <P5 color={"text-light"} textAlign={"center"}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </P5>
+      <section className="main-section flex-col gap-40">
+        <div className="container">
+          <H1 textAlign={"center"}>Love of Our People</H1>
+          <P5 color={"text-light"} textAlign={"center"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </P5>
+        </div>
         <TestimonialSlider />
       </section>
       <section className="main-section get-app-section">
         <div
-          className="container flex"
+          className="container flex-responsive gap-50"
           style={{
             alignItems: "center",
-            gap: "100px",
           }}
         >
           <div
@@ -288,20 +279,8 @@ const Home = () => {
             </P4>
             <DownloadAppButton />
           </div>
-          <div
-            className="flex-1 flex"
-            style={{
-              alignItems: "center",
-            }}
-          >
-            <ImageComp
-              src={iphoneMobile}
-              style={{
-                marginRight: "-40px",
-                zIndex: "2",
-              }}
-            />
-            <ImageComp src={iphoneMobileDisplay} />
+          <div className="flex-1">
+            <ImageComp src={two_mobiles} />
           </div>
         </div>
       </section>

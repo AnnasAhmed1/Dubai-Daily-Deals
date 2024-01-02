@@ -14,32 +14,15 @@ import InputFeilds from "./helperComponents/inputFeilds/InputFeilds";
 const ContactSection = () => {
   return (
     <div className="container">
-      <section
-        className="main-section flex "
-        style={{
-          gap: "50px",
-        }}
-      >
-        <div
-          className="flex-1 flex-col"
-          style={{
-            gap: "30px",
-          }}
-        >
+      <section className="main-section flex-responsive gap-50">
+        <div className="flex-1 flex-col gap-30">
           <H1>Get in Touch</H1>
           <P4 color={"text-light"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt
           </P4>
           <H5>Send us message</H5>
-          <FormComp
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(2,1fr)",
-              columnGap: "50px",
-              rowGap: "30px",
-            }}
-          >
+          <FormComp className="contact-form">
             <InputFeilds label={"First Name"} />
             <InputFeilds label={"Last Name"} />
             <InputFeilds label={"Location"} />
@@ -48,19 +31,14 @@ const ContactSection = () => {
             <ButtonComp>Send Message</ButtonComp>
           </FormComp>
         </div>
-        <div
-          className="flex-1 flex-col"
-          style={{
-            gap: "30px",
-          }}
-        >
+        <div className="flex-1 flex-col gap-30">
           <H1>Contact Information</H1>
           <P4 color={"text-light"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt
           </P4>
           <H5>Get Our Info</H5>
-          <ul className="flex-col gap-20">
+          <ul className="flex-col gap-10">
             {[
               {
                 icon: call,
@@ -77,7 +55,7 @@ const ContactSection = () => {
             ]?.map((data, index) => {
               return (
                 <li key={index} className="flex items-center gap-20">
-                  <ImageComp src={data.icon} width={"30px"} />
+                  <ImageComp src={data.icon} width={"25px"} />
                   <P5 color={"text-light"}> {data.value}</P5>
                 </li>
               );

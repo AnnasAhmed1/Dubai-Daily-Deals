@@ -13,6 +13,9 @@ const RoundedLogo = ({ width, height, borderRadius, padding }) => {
         width: width ? width : "80px",
         height: height ? height : "80px",
       }}
+      imageStyle={{
+        width: "100%",
+      }}
     />
   );
 };

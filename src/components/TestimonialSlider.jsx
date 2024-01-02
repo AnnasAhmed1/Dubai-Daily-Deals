@@ -16,6 +16,15 @@ const TestimonialSlider = () => {
     arrows: true,
     prevArrow: <SamplePrevArrow />,
     nextArrow: <SampleNextArrow />,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          centerPadding: "10%",
+          dots: false,
+        },
+      },
+    ],
   };
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;

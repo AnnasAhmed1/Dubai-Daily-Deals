@@ -29,15 +29,12 @@ import westin from "../../assets/partners/westin.svg";
 import GradientIconCard from "../../components/GradientIconCard";
 import IconCard from "../../components/IconCard";
 import ButtonComp from "../../components/helperComponents/button/ButtonComp";
-import {
-    H1,
-    H2
-} from "../../components/helperComponents/heading/heading";
+import { H1, H2 } from "../../components/helperComponents/heading/heading";
 import ImageComp from "../../components/helperComponents/image/imageComp";
 import {
-    P3,
-    P5,
-    P6
+  P3,
+  P5,
+  P6,
 } from "../../components/helperComponents/paragraph/paragraph";
 import Navbar from "../../components/navbar";
 
@@ -121,17 +118,18 @@ const Member = () => {
         </div>
       </section>
       <div className="container">
-        <section className="main-section qualities-section flex">
+        <section className="main-section qualities-section flex-responsive">
           <div
             style={{
               flex: "1.5",
             }}
+            className="flex-col gap-40"
           >
             <H2>
               Enhance online visibility and drive targeted customers to your
               venue.
             </H2>
-            <div className="qualities-section-cards">
+            <div className="qualities-section-cards gap-30">
               <GradientIconCard />
               <GradientIconCard />
               <GradientIconCard />
@@ -145,22 +143,21 @@ const Member = () => {
             }}
           />
         </section>
-        <section className="main-section features-section flex">
+        <section className="main-section features-section flex-responsive-reverse">
           <ImageComp
             src={featureBannerImage}
             style={{
               flex: "1.3",
-              paddingRight: "30px",
             }}
           />
-          <div className="features-section-text flex-col flex-1">
+          <div className="features-section-text flex-col gap-30 flex-1">
             <H2>FAQs</H2>
             {faqs?.map((faq, index) => {
               return <Faq faq={faq} index={index} />;
             })}
           </div>
         </section>
-        <section className="main-section sharing-section flex">
+        <section className="main-section sharing-section flex-responsive">
           <div className="flex-1 flex-col sharing-section-text">
             <H2>What makes us different?</H2>
             <P6 color={"text-light"}>
@@ -179,7 +176,7 @@ const Member = () => {
             </P6>
           </div>
           <div
-            className="flex-1 sharing-section-cards"
+            className="flex-1 sharing-section-cards gap-30"
             style={{
               alignItems: "center",
             }}
@@ -205,17 +202,7 @@ const Member = () => {
         </section>
         <section className="main-section partners-section flex-col gap-50">
           <H2 textAlign={"center"}>Our Partners</H2>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4,1fr)",
-              gap: "40px",
-              padding: "0 20px",
-              justifyContent: "center",
-              alignContent: "center",
-              alignItems: "center",
-            }}
-          >
+          <div className="partners-cards gap-30">
             {partners?.map((partner, index) => {
               return <PartnerLogo key={index} src={partner.icon} />;
             })}

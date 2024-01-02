@@ -7,11 +7,16 @@ const CompleteLogo = () => {
     <div
       style={{
         display: "flex",
-        alignItems: "flex-start",
         gap: "10px",
       }}
     >
-      <ImageComp src={logo} />
+      <ImageComp
+        src={logo}
+        className={"logo_image"}
+        imageStyle={{
+          width: "100%",
+        }}
+      />
       <div style={{}}>
         <h1
           style={{

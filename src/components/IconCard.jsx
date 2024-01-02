@@ -7,7 +7,12 @@ import "../styles/component.css";
 const IconCard = ({ icon, iconwidth, heading, text, className }) => {
   return (
     <div className={`flex-col iconCard ${className}`}>
-      <ImageComp src={icon} width={iconwidth ? iconwidth : "45px"} />
+      <ImageComp
+        src={icon}
+        width={iconwidth ? iconwidth : null}
+        imageStyle={{ width: "100%" }}
+        className={"iconCard-icon"}
+      />
       <H4>{heading}</H4>
       <P6 color={"text-light"}>{text}</P6>
     </div>

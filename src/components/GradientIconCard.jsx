@@ -7,11 +7,12 @@ import punctualityIcon from "../assets/icons/punctuality.svg";
 
 const GradientIconCard = () => {
   return (
-    <div className="flex-col gradientIconCard">
+    <div className="flex-col gradientIconCard gap-10">
       <ImageComp
         src={punctualityIcon}
         width={"60px"}
         height={"60px"}
+        imageStyle={{ width: "100%" }}
         style={{
           background: "var(--gradient-primary)",
           borderRadius: "10px",

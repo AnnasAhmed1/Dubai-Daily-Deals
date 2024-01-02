@@ -18,20 +18,26 @@ const DownloadAppButton = ({ appstore = false }) => {
           borderRadius: "8px",
         }}
       >
-        <ImageComp src={true ? appleIcon : playstoreIcon} width={"25px"} />
+        <ImageComp
+          src={true ? appleIcon : playstoreIcon}
+          width={"25px"}
+          imageStyle={{ width: "100%" }}
+        />
         <div>
           {true ? (
             <>
               <p
                 style={{
                   fontSize: "10px",
+                  textAlign: "left",
+                  marginBottom: "-7px",
                 }}
               >
                 Download on the
               </p>
               <p
                 style={{
-                  fontSize: "15px",
+                  fontSize: "20px",
                   fontWeight: "500",
                 }}
               >
@@ -73,7 +79,11 @@ const DownloadAppButton = ({ appstore = false }) => {
           borderRadius: "8px",
         }}
       >
-        <ImageComp src={appstore ? appleIcon : playstoreIcon} width={"25px"} />
+        <ImageComp
+          src={appstore ? appleIcon : playstoreIcon}
+          width={"25px"}
+          imageStyle={{ width: "100%" }}
+        />
         <div>
           {appstore ? (
             <>

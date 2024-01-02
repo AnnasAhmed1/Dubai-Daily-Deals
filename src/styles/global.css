@@ -29,13 +29,13 @@ body .container {
 
 @media (max-width: 1400px) {
     body .container {
-        max-width: 1320px;
+        padding: 0 100px;
     }
 }
 
 @media (max-width: 1200px) {
     body .container {
-        max-width: 1140px;
+        padding: 0 80px;
     }
 
     .main-section {
@@ -45,7 +45,7 @@ body .container {
 
 @media (max-width: 992px) {
     body .container {
-        max-width: 960px;
+        padding: 0 60px;
     }
 
     .main-section {
@@ -55,7 +55,7 @@ body .container {
 
 @media (max-width: 768px) {
     body .container {
-        max-width: 720px;
+        padding: 0 40px;
     }
 
     .main-section {
@@ -65,7 +65,7 @@ body .container {
 
 @media (max-width: 576px) {
     body .container {
-        max-width: 540px;
+        padding: 0 20px;
     }
 
     .main-section {
@@ -78,6 +78,14 @@ body .container {
 }
 
 .flex {
+    display: flex;
+}
+
+.flex-responsive {
+    display: flex;
+}
+
+.flex-responsive-reverse {
     display: flex;
 }
 
@@ -110,6 +118,10 @@ body .container {
     gap: 20px;
 }
 
+.gap-30 {
+    gap: 30px;
+}
+
 .gap-40 {
     gap: 40px;
 }
@@ -117,6 +129,29 @@ body .container {
 .gap-50 {
     gap: 50px;
 }
+
+@media(max-width:768px) {
+    .gap-10 {
+        gap: 5px;
+    }
+
+    .gap-20 {
+        gap: 10px;
+    }
+
+    .gap-30 {
+        gap: 20px;
+    }
+
+    .gap-40 {
+        gap: 30px;
+    }
+
+    .gap-50 {
+        gap: 40px;
+    }
+}
+
 
 .relative {
     position: relative;
@@ -132,4 +167,34 @@ body .container {
 
 .grid-row-span2 {
     grid-row: span 2;
+}
+
+@media (max-width:576px) {
+    .grid-span2 {
+        grid-column: span 1;
+    }
+
+}
+
+@media (max-width:992px) {
+    .flex-responsive {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .flex-responsive-reverse {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+@media (max-width:768px) {
+
+    .flex-responsive,
+    .flex-responsive-reverse {
+        gap: 30px;
+    }
+
 }
