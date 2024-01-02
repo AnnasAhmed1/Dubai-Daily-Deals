@@ -30,6 +30,7 @@ import facebook from "./icons/facebook.svg";
 import google from "./icons/google.svg";
 import instagram from "./icons/instagram.svg";
 import twitter from "./icons/twitter.svg";
+import menu from "./icons/menu.svg";
 
 import punctualityIcon from "./icons/punctuality.svg";
 import testimonialImage from "./testimonial_img1.png";
@@ -91,4 +92,5 @@ export {
   mobileDisplay,
   introVideo,
   two_mobiles,
+  menu,
 };

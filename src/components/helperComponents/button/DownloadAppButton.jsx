@@ -5,19 +5,8 @@ import ImageComp from "../image/imageComp";
 
 const DownloadAppButton = ({ appstore = false }) => {
   return (
-    <div className="flex gap-20">
-      <button
-        style={{
-          background: "#ffffff",
-          width: "180px",
-          height: "50px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "10px",
-          borderRadius: "8px",
-        }}
-      >
+    <div className="flex gap-20 downloadAppButtons-container">
+      <button className="downloadAppButton">
         <ImageComp
           src={true ? appleIcon : playstoreIcon}
           width={"25px"}
@@ -67,18 +56,7 @@ const DownloadAppButton = ({ appstore = false }) => {
           )}
         </div>
       </button>
-      <button
-        style={{
-          background: "#ffffff",
-          width: "180px",
-          height: "50px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "10px",
-          borderRadius: "8px",
-        }}
-      >
+      <button className="downloadAppButton">
         <ImageComp
           src={appstore ? appleIcon : playstoreIcon}
           width={"25px"}

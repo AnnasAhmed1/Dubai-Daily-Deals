@@ -9,7 +9,6 @@ import messagesIcon from "../../assets/icons/messages.svg";
 import securityIcon from "../../assets/icons/security.svg";
 import listIcon from "../../assets/icons/todo_list_icon.svg";
 import iphoneMobile from "../../assets/iphone_mobile.png";
-import iphoneMobileDisplay from "../../assets/iphone_mobile_display.png";
 import mobileDisplay from "../../assets/mobile_display1.png";
 import introVideo from "../../assets/videos/intro_video.png";
 import GradientIconCard from "../../components/GradientIconCard";
@@ -240,9 +239,7 @@ const Home = () => {
           <ImageComp
             src={introVideo}
             className={"relative video-section-video"}
-            style={{
-              height: "550px",
-            }}
+            imageStyle={{ width: "100%" }}
           />
         </section>
       </div>

@@ -7,7 +7,7 @@ const CompleteLogo = () => {
     <div
       style={{
         display: "flex",
-        gap: "10px",
+        gap: "5px",
       }}
     >
       <ImageComp
@@ -21,8 +21,8 @@ const CompleteLogo = () => {
         <h1
           style={{
             fontFamily: "Futura",
-            fontSize: "48.06px",
-            lineHeight: "48.83px",
+            fontSize: "45.06px",
+            lineHeight: "45.83px",
             color: "var(--text-white)",
           }}
         >

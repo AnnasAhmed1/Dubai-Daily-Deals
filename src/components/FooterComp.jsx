@@ -13,12 +13,13 @@ const FooterComp = () => {
   return (
     <footer className="main-section footer-section">
       <div
-        className="container flex items-center gap-20"
+        className="container flex items-center gap-20 w-full"
         style={{
           justifyContent: "space-between",
+          flexWrap: "wrap",
         }}
       >
-        <div className="flex flex-1/ items-center gap-10">
+        <div className="flex flex-1/ items-center gap-10 footer-sub-conainers">
           <RoundedLogo
             borderRadius={"10px"}
             width={"50px"}
@@ -31,7 +32,7 @@ const FooterComp = () => {
             All rights reserved.
           </P6>
         </div>
-        <div className="flex-col gap-10 flex-1/ items-center justify-center">
+        <div className="flex-col gap-10 flex-1/ items-center justify-center footer-sub-conainers">
           <P6 color={"text-white"} weight="700">
             STAY IN TOUCH WITH US
           </P6>
@@ -67,7 +68,7 @@ const FooterComp = () => {
           </FormComp>
         </div>
         <div
-          className="flex flex-1/ items-center gap-10"
+          className="flex flex-1/ items-center gap-10 footer-sub-conainers"
           style={{
             justifyContent: "flex-end",
           }}
@@ -88,7 +89,7 @@ const FooterComp = () => {
                   border: "2px solid var(--text-white)",
                   borderRadius: "40px",
                   padding: "7px",
-                  cursor:"pointer"
+                  cursor: "pointer",
                 }}
               />
             );

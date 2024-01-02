@@ -152,7 +152,9 @@ body .container {
     }
 }
 
-
+.w-full{
+    width: 100%;
+}
 .relative {
     position: relative;
 }
@@ -197,4 +199,27 @@ body .container {
         gap: 30px;
     }
 
+}
+
+.show-laptop {
+    display: none;
+}
+
+/* .hide {
+    display: none;
+}
+
+.show {
+    display: block;
+} */
+
+@media(max-width:992px) {
+
+    .hide-laptop {
+        display: none;
+    }
+
+    .show-laptop {
+        display: block;
+    }
 }

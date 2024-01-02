@@ -2,6 +2,21 @@
     width: 45px;
 }
 
+.nav_item p {
+    color: var(--text-white);
+    white-space: nowrap;
+}
+
+.nav_item:hover {
+    background: var(--text-white);
+}
+
+.nav_item:hover p {
+    color: var(--text-blue);
+}
+
+
+
 .iconCard {
     gap: 10px;
     border-radius: 20px;
@@ -120,6 +135,17 @@
 
 .footer-section {
     background: var(--text-dark);
+}
+
+@media(max-width:576px) {
+
+    .footer-sub-conainers {
+        width: 100%;
+        justify-content: flex-start !important;
+        margin: 10px 0px;
+        gap: 10px !important;
+    }
+
 }
 
 .partnerLogo {
