@@ -72,6 +72,7 @@ const TestimonialSlider = () => {
       {slidesData?.map((data, index) => {
         return (
           <div
+            key={index}
             className="flex-col slide"
             style={{
               margin: "0 10px",

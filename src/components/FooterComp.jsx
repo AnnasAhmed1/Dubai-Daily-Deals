@@ -58,12 +58,11 @@ const FooterComp = () => {
                 width: "fit-content",
                 height: "fit-content",
                 borderRadius: "40px",
-                padding: "10px 20px",
+                padding: "0px 10px",
               }}
+              weight="500"
             >
-              <P7 weight={"500"} color={"text-white"}>
-                SUBSCRIBE
-              </P7>
+              SUBSCRIBE
             </ButtonComp>
           </FormComp>
         </div>

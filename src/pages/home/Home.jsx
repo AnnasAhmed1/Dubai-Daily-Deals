@@ -37,6 +37,7 @@ const Home = () => {
     <main>
       <section
         className="header-section"
+        id="home"
         style={{
           paddingBottom: "60px",
         }}
@@ -61,7 +62,7 @@ const Home = () => {
         </div>
       </section>
       <div className="container">
-        <section className="main-section list-section flex-col gap-40">
+        <section className="main-section list-section flex-col gap-40" id="">
           <H2 textAlign={"center"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum
             dolor sit amet,
@@ -81,7 +82,10 @@ const Home = () => {
             })}
           </div>
         </section>
-        <section className="main-section qualities-section flex-responsive gap-30">
+        <section
+          className="main-section qualities-section flex-responsive gap-30"
+          id="about"
+        >
           <div
             style={{
               flex: "1.75",
@@ -103,7 +107,10 @@ const Home = () => {
             }}
           />
         </section>
-        <section className="main-section features-section flex-responsive-reverse">
+        <section
+          className="main-section features-section flex-responsive-reverse"
+          id="features"
+        >
           <ImageComp
             src={featureBannerImage}
             style={{
@@ -166,7 +173,10 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <section className="main-section app-screeshot-section flex-responsive">
+      <section
+        className="main-section app-screeshot-section flex-responsive"
+        id="how_it_works"
+      >
         <div
           className="app-screeshot-section-text flex-1"
           style={{
@@ -243,7 +253,7 @@ const Home = () => {
           />
         </section>
       </div>
-      <section className="main-section flex-col gap-40">
+      <section className="main-section flex-col gap-40" id="reviews">
         <div className="container">
           <H1 textAlign={"center"}>Love of Our People</H1>
           <P5 color={"text-light"} textAlign={"center"}>

@@ -1,20 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import RoundedButtonComp from "./helperComponents/button/RoundedButton";
 import { P5 } from "./helperComponents/paragraph/paragraph";
 import CompleteLogo from "./logo/CompleteLogo";
 import ImageComp from "./helperComponents/image/imageComp";
-import { menu } from "../assets/asset";
+import { logo, menu } from "../assets/asset";
 import { Dropdown } from "antd";
 
 const Navbar = () => {
   const navs = [
-    { title: "Home", active: false },
-    { title: "About App", active: false },
-    { title: "Features", active: false },
-    { title: "How it Works", active: false },
-    { title: "Reviews", active: false },
-    { title: "Contact", active: false },
+    { title: "Home", active: false, id: "home" },
+    { title: "About App", active: false, id: "about" },
+    { title: "Features", active: false, id: "features" },
+    { title: "How it Works", active: false, id: "how_it_works" },
+    { title: "Reviews", active: false, id: "reviews" },
+    { title: "Contact", active: false, id: "contact" },
   ];
   let items = navs?.map((nav, index) => {
     return {
@@ -54,7 +54,22 @@ const Navbar = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
+  function scrollToSection(e, id) {
+    console.log(id);
+    e.preventDefault();
+    const element = document.querySelector(`#${id}`);
+    element?.scrollIntoView({ behavior: "smooth" });
+    if (element && id !== "home") {
+      const offset = -1;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
 
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: "smooth",
+      });
+    }
+  }
   return (
     <nav
       style={{
@@ -90,18 +105,20 @@ const Navbar = () => {
                     : null,
               }}
               className={"nav_item"}
+              onClick={(e) => {
+                scrollToSection(e, `${nav.id}`);
+                console.log(nav.id);
+              }}
             >
-              <Link to={"/"}>
-                <P5
-                  color={
-                    location.pathname === "/" && index === 0
-                      ? "text-blue"
-                      : null
-                  }
-                >
-                  {nav.title}
-                </P5>
-              </Link>
+              {/* <Link to={`#${nav.id}`}> */}
+              <P5
+                color={
+                  location.pathname === "/" && index === 0 ? "text-blue" : null
+                }
+              >
+                {nav.title}
+              </P5>
+              {/* </Link> */}
             </li>
           );
         })}

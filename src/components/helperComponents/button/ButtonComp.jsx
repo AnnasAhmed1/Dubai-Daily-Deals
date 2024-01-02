@@ -7,6 +7,7 @@ const ButtonComp = ({
   style = {},
   color = "gradient-secondary",
   className,
+  weight,
 }) => {
   return (
     <button
@@ -17,7 +18,9 @@ const ButtonComp = ({
       }}
       className={`buttonComp  ${className}`}
     >
-      <P6 color={"text-white"}>{children}</P6>
+      <P6 color={"text-white"} weight={weight}>
+        {children}
+      </P6>
     </button>
   );
 };

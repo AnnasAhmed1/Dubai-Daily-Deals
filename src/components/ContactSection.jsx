@@ -13,7 +13,7 @@ import FormComp from "./helperComponents/form/FormComp";
 import InputFeilds from "./helperComponents/inputFeilds/InputFeilds";
 const ContactSection = () => {
   return (
-    <div className="container">
+    <div className="container" id="contact">
       <section className="main-section flex-responsive gap-50">
         <div className="flex-1 flex-col gap-30">
           <H1>Get in Touch</H1>
