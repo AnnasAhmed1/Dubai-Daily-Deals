@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { P2, P5 } from "./helperComponents/paragraph/paragraph";
+import { P2, P3, P5 } from "./helperComponents/paragraph/paragraph";
 import ImageComp from "./helperComponents/image/imageComp";
 import testimonialImage from "../assets/testimonial_img1.png";
 
@@ -73,20 +73,21 @@ const TestimonialSlider = () => {
         return (
           <div
             key={index}
-            className="flex-col slide"
+            className="flex-col gap-10 slide relative/"
             style={{
               margin: "0 10px",
+              height: "100%",
             }}
           >
-            <P2 textAlign={"center"} key={index}>
+            <P3 textAlign={"center"} key={index}>
               {data.text}
-            </P2>
+            </P3>
             <div
-              className="flex"
+              className="flex gap-10 absolute/ w-full"
               style={{
                 justifyContent: "center",
                 alignItems: "center",
-                gap: "10px",
+                marginTop: "10px",
               }}
             >
               <ImageComp src={testimonialImage} />

@@ -50,8 +50,8 @@ const FooterComp = () => {
               placeholder="Weekly Newsletter"
               style={{
                 borderRadius: "40px",
-                paddingLeft: "20px",
               }}
+              className="footerComp-input"
             />
             <ButtonComp
               style={{
