@@ -25,6 +25,7 @@ import westin from "./partners/westin.svg";
 import call from "./icons/call.svg";
 import email from "./icons/email.svg";
 import web from "./icons/website.svg";
+import play from "./icons/play.svg";
 
 import facebook from "./icons/facebook.svg";
 import google from "./icons/google.svg";
@@ -39,6 +40,8 @@ import playstoreIcon from "./icons/playstore_icon.svg";
 import logo from "./icons/logo.svg";
 import headerImage from "./heading_banner_img.png";
 import clipboardIcon from "./icons/clipboard.svg";
+import up_arrow from "./icons/up_arrow.svg";
+import down_arrow from "./icons/down_arrow.svg";
 import messagesIcon from "./icons/messages.svg";
 import listIcon from "./icons/todo_list_icon.svg";
 import iphoneMobile from "./iphone_mobile.png";
@@ -61,6 +64,7 @@ export {
   hospitality,
   jones,
   lock_stock,
+  play,
   mariott,
   meridien,
   nikki_beach,
@@ -93,4 +97,6 @@ export {
   introVideo,
   two_mobiles,
   menu,
+  down_arrow,
+  up_arrow,
 };

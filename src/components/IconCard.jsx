@@ -6,7 +6,7 @@ import "../styles/component.css";
 
 const IconCard = ({ icon, iconwidth, heading, text, className }) => {
   return (
-    <div className={`flex-col iconCard ${className}`}>
+    <div className={`flex-col iconCard gap-10 ${className}`}>
       <ImageComp
         src={icon}
         width={iconwidth ? iconwidth : null}
