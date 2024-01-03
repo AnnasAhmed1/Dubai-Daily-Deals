@@ -13,7 +13,7 @@ const ImageComp = ({
     <div
       style={{
         width,
-        height,
+        height, 
         ...style,
       }}
       className={`imageComp ${className}`}

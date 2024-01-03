@@ -31,6 +31,8 @@ import TestimonialSlider from "../../components/TestimonialSlider";
 import DownloadAppButton from "../../components/helperComponents/button/DownloadAppButton";
 
 import "../../styles/pages/home.css";
+import AppScreenshotSlider from "../../components/AppScreenshotSlider";
+import VideoComp from "../../components/video";
 
 const Home = () => {
   return (
@@ -47,7 +49,7 @@ const Home = () => {
           <div
             className="flex-1 flex-col gap-20"
             style={{
-              paddingTop: "40px",
+              paddingTop: "10px",
             }}
           >
             <H1 color={"text-white"}>The standard Lorem Ipsum passage</H1>
@@ -63,12 +65,12 @@ const Home = () => {
       </section>
       <div className="container">
         <section className="main-section list-section flex-col gap-40" id="">
-          <H2 textAlign={"center"}>
+          <H2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum
             dolor sit amet,
           </H2>
           <div className="list-section-cards gap-20">
-            {[1, 2, 3].map((data, index) => {
+            {[1, 2, 3].map((_, index) => {
               return (
                 <IconCard
                   key={index}
@@ -178,67 +180,59 @@ const Home = () => {
         id="how_it_works"
       >
         <div
-          className="app-screeshot-section-text flex-1"
+          className="app-screeshot-section-static"
           style={{
-            flex: "2",
-          }}
-        >
-          <H3 color={"text-white"}>App Screenshots</H3>
-          <P5 color={"text-white"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </P5>
-        </div>
-        <div
-          style={{
-            flex: "4",
             display: "flex",
+            // width:"50%",
+            // paddingRight:"5%"
+            // alignItems: "center",
           }}
-          className="app-screenshots-images"
         >
-          <ImageComp
-            src={iphoneMobile}
-            className={"flex-1"}
-            width={"200px"}
-            imageStyle={{
-              objectFit: "cover",
-              width: "100%",
-            }}
-          />
           <div
-            className="flex absolute/"
+            className="app-screeshot-section-text gap-20 flex-1/"
             style={{
-              flex: "3",
-              padding: "20px 0",
+              height: "fit-content",
+              margin: "auto",
+              // width: "100%",
+              // flex: 1,
             }}
           >
-            <ImageComp
-              src={mobileDisplay}
-              className={"flex-1"}
-              imageStyle={{
-                objectFit: "cover",
-                width: "100%",
-              }}
-            />
-            <ImageComp
-              src={mobileDisplay}
-              className={"flex-1"}
-              imageStyle={{
-                objectFit: "cover",
-                width: "100%",
-              }}
-            />
-            <ImageComp
-              src={mobileDisplay}
-              className={"flex-1"}
-              imageStyle={{
-                objectFit: "cover",
-                width: "100%",
-              }}
-            />
+            <H3 color={"text-white"}>App Screenshots</H3>
+            <P5 color={"text-white"}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </P5>
           </div>
+          <ImageComp
+            src={iphoneMobile}
+            className={"app-screenshot-iphonemobile"}
+            width={"130%"}
+            style={{
+              marginLeft: "-20px",
+              // marginRight: "30px",
+            }}
+            imageStyle={
+              {
+                // width: "80%",
+                // marginRight: "auto",
+                // marginLeft: "0px",
+              }
+            }
+          />
+        </div>
+        <div
+          style={
+            {
+              // flex: "4",
+              // marginLeft:"-5%"
+              // display: "flex",
+            }
+          }
+          className="app-screenshots-images-slider"
+        >
+          <AppScreenshotSlider />
         </div>
       </section>
       <div className="container ">
@@ -246,14 +240,10 @@ const Home = () => {
           <H1 textAlign={"center"}>
             If you're in doubt, Why Choose Dubai Daily Deals
           </H1>
-          <ImageComp
-            src={introVideo}
-            className={"relative video-section-video"}
-            imageStyle={{ width: "100%" }}
-          />
+          <VideoComp />
         </section>
       </div>
-      <section className="main-section flex-col gap-40" id="reviews">
+      <section className="main-section-b flex-col gap-40" id="reviews">
         <div className="container">
           <H1 textAlign={"center"}>Love of Our People</H1>
           <P5 color={"text-light"} textAlign={"center"}>

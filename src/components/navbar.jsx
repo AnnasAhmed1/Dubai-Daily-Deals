@@ -110,15 +110,17 @@ const Navbar = () => {
                 console.log(nav.id);
               }}
             >
-              {/* <Link to={`#${nav.id}`}> */}
-              <P5
-                color={
-                  location.pathname === "/" && index === 0 ? "text-blue" : null
-                }
-              >
-                {nav.title}
-              </P5>
-              {/* </Link> */}
+              <Link to={`${index === 0 ? "/" : ""}`}>
+                <P5
+                  color={
+                    location.pathname === "/" && index === 0
+                      ? "text-blue"
+                      : null
+                  }
+                >
+                  {nav.title}
+                </P5>
+              </Link>
             </li>
           );
         })}

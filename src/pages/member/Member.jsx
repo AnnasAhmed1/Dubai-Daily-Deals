@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import banner1Image from "../../assets/banner1_img.png";
@@ -85,7 +85,14 @@ const Member = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
     },
   ];
-
+  const [active, setActive] = useState(0);
+  const handleActive = (index) => {
+    if (index === active) {
+      setActive(null);
+    } else {
+      setActive(index);
+    }
+  };
   return (
     <main>
       <section
@@ -95,17 +102,11 @@ const Member = () => {
         }}
       >
         <Navbar />
-        <div
-          style={{
-            gap: "10px",
-            // alignItems: "center",
-          }}
-          className="container flex"
-        >
+        <div className="container flex gap-0">
           <div
             className="flex-1 flex-col gap-20"
             style={{
-              paddingTop: "100px",
+              paddingTop: "10px",
             }}
           >
             <H1 color={"text-white"}>The Ultimate Marketing Tool</H1>
@@ -118,7 +119,10 @@ const Member = () => {
         </div>
       </section>
       <div className="container">
-        <section className="main-section qualities-section flex-responsive">
+        <section
+          className="main-section qualities-section flex-responsive"
+          id="about"
+        >
           <div
             style={{
               flex: "1.5",
@@ -143,7 +147,10 @@ const Member = () => {
             }}
           />
         </section>
-        <section className="main-section features-section flex-responsive-reverse">
+        <section
+          className="main-section features-section flex-responsive-reverse"
+          id="how_it_works"
+        >
           <ImageComp
             src={featureBannerImage}
             style={{
@@ -153,11 +160,21 @@ const Member = () => {
           <div className="features-section-text flex-col gap-30 flex-1">
             <H2>FAQs</H2>
             {faqs?.map((faq, index) => {
-              return <Faq faq={faq} index={index} />;
+              return (
+                <Faq
+                  faq={faq}
+                  index={index}
+                  handleActive={handleActive}
+                  active={active}
+                />
+              );
             })}
           </div>
         </section>
-        <section className="main-section sharing-section flex-responsive">
+        <section
+          className="main-section sharing-section flex-responsive"
+          id="features"
+        >
           <div className="flex-1 flex-col sharing-section-text">
             <H2>What makes us different?</H2>
             <P6 color={"text-light"}>
@@ -210,7 +227,7 @@ const Member = () => {
         </section>
       </div>
 
-      <section className="main-section">
+      <section className="main-section" id="reviews">
         <div className="container">
           <H1 textAlign={"center"}>Hear from our partners</H1>
           <P5 color={"text-light"} textAlign={"center"}>
