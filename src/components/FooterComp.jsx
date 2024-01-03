@@ -51,7 +51,7 @@ const FooterComp = () => {
               style={{
                 borderRadius: "40px",
               }}
-              className="footerComp-input"
+              className="footerComp-input w-full"
             />
             <ButtonComp
               style={{
