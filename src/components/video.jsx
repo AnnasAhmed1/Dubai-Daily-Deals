@@ -16,7 +16,6 @@ const VideoComp = () => {
       }
     }
   };
-  console.log(isPlaying);
   return (
     <div className="relative videoComp">
       <div
