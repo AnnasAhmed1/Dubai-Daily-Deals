@@ -1,8 +1,10 @@
 import React from "react";
 import ImageComp from "../helperComponents/image/imageComp";
 import { complete_logo } from "../../assets/asset";
+import { useNavigate } from "react-router-dom";
 
 const CompleteLogo = () => {
+  const navigate = useNavigate();
   return (
     <ImageComp
       src={complete_logo}
@@ -10,6 +12,7 @@ const CompleteLogo = () => {
       imageStyle={{
         width: "100%",
       }}
+      onClick={()=>navigate("/")}
     />
     // <div
     //   style={{
