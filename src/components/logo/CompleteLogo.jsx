@@ -8,7 +8,7 @@ const CompleteLogo = () => {
   return (
     <ImageComp
       src={complete_logo}
-      className={"logo_image"}
+      className={"logo_image pointer"}
       imageStyle={{
         width: "100%",
       }}
