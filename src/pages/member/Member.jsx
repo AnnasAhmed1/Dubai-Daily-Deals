@@ -1,31 +1,13 @@
 import React, { useState } from "react";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import "../../styles/pages/member.css";
 import banner1Image from "../../assets/banner1_img.png";
 import featureBannerImage from "../../assets/feature_banner_img.png";
 import clipboardIcon from "../../assets/icons/clipboard.svg";
 import messagesIcon from "../../assets/icons/messages.svg";
 import securityIcon from "../../assets/icons/security.svg";
-import h25 from "../../assets/partners/25h.svg";
-import pedal_7 from "../../assets/partners/7_pedal.svg";
-import barasti from "../../assets/partners/barasti.svg";
-import candy_pants from "../../assets/partners/candy_pants.svg";
-import desert_barbell from "../../assets/partners/desert_barbell.svg";
-import hilton from "../../assets/partners/hilton.svg";
-import hospitality from "../../assets/partners/hospitality.svg";
-import jones from "../../assets/partners/jones.svg";
-import lock_stock from "../../assets/partners/lock_stock.svg";
-import mariott from "../../assets/partners/mariott.svg";
-import meridien from "../../assets/partners/meridien.svg";
-import nikki_beach from "../../assets/partners/nikki_beach.svg";
-import pizza_express from "../../assets/partners/pizza_express.svg";
-import rebel from "../../assets/partners/rebel.svg";
-import revl from "../../assets/partners/revl.svg";
-import sls from "../../assets/partners/sls.svg";
-import solutions from "../../assets/partners/solutions.svg";
-import stregis from "../../assets/partners/stregis.svg";
-import warehouse from "../../assets/partners/warehouse.svg";
-import westin from "../../assets/partners/westin.svg";
+
 import GradientIconCard from "../../components/GradientIconCard";
 import IconCard from "../../components/IconCard";
 import ButtonComp from "../../components/helperComponents/button/ButtonComp";
@@ -43,29 +25,90 @@ import { Faq } from "../../components/Faq";
 import FooterComp from "../../components/FooterComp";
 import PartnerLogo from "../../components/PartnerLogo";
 import TestimonialSlider from "../../components/TestimonialSlider";
+import new_img from "../../assets/partners/new_img.png";
+import {
+  vero,
+  fixe,
+  green_groom,
+  hilton,
+  jumeirah,
+  karma_kafe,
+  lock_stock,
+  logs_embers,
+  london_project,
+  mccafertty,
+  mecgatticans,
+  media_hotel,
+  movenpick,
+  myagi,
+  peaches_cream,
+  phileas_fogg,
+  pure,
+  qwerty,
+  revier,
+  sals,
+  sucre,
+  taj,
+  talk_restaurant,
+  think_luxe,
+  tidal_titans,
+  trader_vics,
+  TT,
+} from "../../assets/asset";
+import HeaderSectionLayout from "../../components/headerSection";
+import TestimonialSection from "../../components/testimonialSection";
 
 const Member = () => {
   const partners = [
-    { icon: barasti },
-    { icon: pedal_7 },
-    { icon: h25 },
-    { icon: candy_pants },
-    { icon: desert_barbell },
-    { icon: hilton },
-    { icon: hospitality },
-    { icon: jones },
-    { icon: lock_stock },
-    { icon: mariott },
-    { icon: meridien },
-    { icon: nikki_beach },
-    { icon: pizza_express },
-    { icon: rebel },
-    { icon: sls },
-    { icon: revl },
-    { icon: solutions },
-    { icon: stregis },
-    { icon: warehouse },
-    { icon: westin },
+    // {
+    vero,
+    fixe,
+    green_groom,
+    hilton,
+    jumeirah,
+    karma_kafe,
+    lock_stock,
+    logs_embers,
+    london_project,
+    mccafertty,
+    mecgatticans,
+    media_hotel,
+    movenpick,
+    myagi,
+    peaches_cream,
+    phileas_fogg,
+    pure,
+    qwerty,
+    revier,
+    sals,
+    sucre,
+    taj,
+    talk_restaurant,
+    think_luxe,
+    tidal_titans,
+    trader_vics,
+    TT,
+    // }
+    // { icon: new_img },
+    // { icon: pedal_7 },
+    // { icon: h25 },
+    // { icon: candy_pants },
+    // { icon: desert_barbell },
+    // { icon: hilton },
+    // { icon: hospitality },
+    // { icon: jones },
+    // { icon: lock_stock },
+    // { icon: mariott },
+    // { icon: meridien },
+    // { icon: nikki_beach },
+    // { icon: pizza_express },
+    // { icon: rebel },
+    // { icon: sls },
+    // { icon: revl },
+    // { icon: solutions },
+    // { icon: stregis },
+    // { icon: warehouse },
+    // { icon: westin },
   ];
 
   const faqs = [
@@ -95,13 +138,8 @@ const Member = () => {
   };
   return (
     <main>
-      <section
-        className="header-section"
-        style={{
-          paddingBottom: "60px",
-        }}
-      >
-        <Navbar />
+      <Navbar home={false} />
+      <HeaderSectionLayout id="about">
         <div className="container flex gap-0">
           <div
             className="flex-1 flex-col gap-20"
@@ -117,7 +155,7 @@ const Member = () => {
             </P5>
           </div>
         </div>
-      </section>
+      </HeaderSectionLayout>
       <div className="container">
         <section
           className="main-section qualities-section flex-responsive"
@@ -147,30 +185,7 @@ const Member = () => {
             }}
           />
         </section>
-        <section
-          className="main-section features-section flex-responsive-reverse"
-          id="how_it_works"
-        >
-          <ImageComp
-            src={featureBannerImage}
-            style={{
-              flex: "1.3",
-            }}
-          />
-          <div className="features-section-text flex-col gap-30 flex-1">
-            <H2>FAQs</H2>
-            {faqs?.map((faq, index) => {
-              return (
-                <Faq
-                  faq={faq}
-                  index={index}
-                  handleActive={handleActive}
-                  active={active}
-                />
-              );
-            })}
-          </div>
-        </section>
+
         <section
           className="main-section sharing-section flex-responsive"
           id="features"
@@ -217,11 +232,35 @@ const Member = () => {
             })}
           </div>
         </section>
+        <section
+          className="main-section features-section flex-responsive-reverse"
+          id="how_it_works"
+        >
+          <ImageComp
+            src={featureBannerImage}
+            style={{
+              flex: "1.3",
+            }}
+          />
+          <div className="features-section-text flex-col gap-30 flex-1">
+            <H2>FAQs</H2>
+            {faqs?.map((faq, index) => {
+              return (
+                <Faq
+                  faq={faq}
+                  index={index}
+                  handleActive={handleActive}
+                  active={active}
+                />
+              );
+            })}
+          </div>
+        </section>
         <section className="main-section partners-section flex-col gap-50">
           <H2 textAlign={"center"}>Our Partners</H2>
-          <div className="partners-cards gap-30">
+          <div className="partners-cards gap-20">
             {partners?.map((partner, index) => {
-              return <PartnerLogo key={index} src={partner.icon} />;
+              return <PartnerLogo key={index} src={partner} />;
             })}
           </div>
         </section>
@@ -239,6 +278,13 @@ const Member = () => {
         </div>
         <TestimonialSlider />
       </section>
+      <TestimonialSection
+        heading="Hear from our partners"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                  ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat."
+      />
       <section
         className="main-section "
         style={{

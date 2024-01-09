@@ -2,15 +2,6 @@
   margin-right: -80px;
 }
 
-.header-section {
-  background: url("../../assets/heading_bg.png");
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 550px;
-}
-
 .list-section .list-section-cards {
   padding: 0 50px;
   display: grid;
@@ -57,12 +48,8 @@
   align-items: center;
 }
 
-.features-section .features-section-text {
-}
-
 .sharing-section {
   gap: 50px;
-  /* align-items: center; */
 }
 
 .sharing-section .sharing-section-cards {
@@ -122,21 +109,6 @@
   background: var(--gradient-secondary);
 }
 
-.partners-section .partners-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 0 20px;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-@media (max-width: 992px) {
-  .partners-section .partners-cards {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0px;
-  }
-}
 
 @media (max-width: 992px) {
   .home-head-image {

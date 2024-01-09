@@ -1,13 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import RoundedButtonComp from "./helperComponents/button/RoundedButton";
-import { P5 } from "./helperComponents/paragraph/paragraph";
+import { P4, P5, P6 } from "./helperComponents/paragraph/paragraph";
 import CompleteLogo from "./logo/CompleteLogo";
 import ImageComp from "./helperComponents/image/imageComp";
 import { logo, menu } from "../assets/asset";
 import { Dropdown } from "antd";
+import "../styles/component.css";
 
-const Navbar = () => {
+const Navbar = ({ home = true }) => {
   const navs = [
     { title: "Home", active: false, id: "home" },
     { title: "About App", active: false, id: "about" },
@@ -27,8 +28,11 @@ const Navbar = () => {
             padding: "0px 10px",
           }}
           className={"nav_item/"}
+          onClick={(e) => {
+            scrollToSection(e, `${nav.id}`);
+          }}
         >
-          <Link to={"/"}>
+          <Link to={`${index === 0 ? "/" : ""}`}>
             <P5 color={"text-dark"}>{nav.title}</P5>
           </Link>
         </li>
@@ -55,12 +59,15 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   function scrollToSection(e, id) {
-    console.log(id);
     e.preventDefault();
+    setActiveSection(id);
     const element = document.querySelector(`#${id}`);
     element?.scrollIntoView({ behavior: "smooth" });
     if (element && id !== "home") {
-      const offset = -1;
+      let offset = 50;
+      if (isScrolled === false) {
+        offset = 120;
+      }
       const elementPosition =
         element.getBoundingClientRect().top + window.scrollY;
 
@@ -70,24 +77,65 @@ const Navbar = () => {
       });
     }
   }
+  const updateCurrentSection = () => {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    for (const section of navs) {
+      const element = document.getElementById(section.id);
+      if (element) {
+        const { top, bottom } = element.getBoundingClientRect();
+
+        if (
+          top <= 500 &&
+          (bottom >= 300 || (top <= windowHeight && bottom >= windowHeight))
+        ) {
+          setActiveSection(section.id);
+          break;
+        }
+      }
+    }
+  };
+  const [activeSection, setActiveSection] = useState(home ? "home" : "about");
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    scrollToTop();
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", updateCurrentSection);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", updateCurrentSection);
+    };
+  }, []);
   return (
     <nav
       style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        paddingTop: "30px",
-        paddingBottom: "30px",
+        paddingTop: "15px",
+        paddingBottom: "15px",
       }}
-      className="container"
+      className={`container navbar ${isScrolled ? "sticky1" : ""}`}
     >
       <CompleteLogo />
       <ul
-        className="flex hide-laptop"
+        className="flex hide-laptop nav_items_list"
         style={{
           color: "white",
-          gap: "5px",
-          fontSize: "18px",
           alignItems: "center",
         }}
       >
@@ -98,26 +146,17 @@ const Navbar = () => {
               style={{
                 cursor: "pointer",
                 borderRadius: "50px",
-                padding: "0px 10px",
+
                 background:
-                  location.pathname === "/" && index === 0
-                    ? "var(--text-white)"
-                    : null,
+                  activeSection === nav?.id ? "var(--text-blue)" : null,
               }}
               className={"nav_item"}
               onClick={(e) => {
                 scrollToSection(e, `${nav.id}`);
-                console.log(nav.id);
               }}
             >
               <Link to={`${index === 0 ? "/" : ""}`}>
-                <P5
-                  color={
-                    location.pathname === "/" && index === 0
-                      ? "text-blue"
-                      : null
-                  }
-                >
+                <P5 color={activeSection === nav?.id ? "text-white" : null}>
                   {nav.title}
                 </P5>
               </Link>

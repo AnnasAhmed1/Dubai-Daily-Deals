@@ -7,7 +7,7 @@ const PartnerLogo = ({ src }) => {
       src={src}
       className={"partnerLogo"}
       imageStyle={{
-        objectFit: "cover",
+        objectFit: "contain",
       }}
     />
   );

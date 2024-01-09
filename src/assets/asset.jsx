@@ -6,10 +6,10 @@ import pedal_7 from "./partners/7_pedal.svg";
 import barasti from "./partners/barasti.svg";
 import candy_pants from "./partners/candy_pants.svg";
 import desert_barbell from "./partners/desert_barbell.svg";
-import hilton from "./partners/hilton.svg";
+// import hilton from "./partners/hilton.svg";
 import hospitality from "./partners/hospitality.svg";
 import jones from "./partners/jones.svg";
-import lock_stock from "./partners/lock_stock.svg";
+// import lock_stock from "./partners/lock_stock.svg";
 import mariott from "./partners/mariott.svg";
 import meridien from "./partners/meridien.svg";
 import nikki_beach from "./partners/nikki_beach.svg";
@@ -45,10 +45,39 @@ import down_arrow from "./icons/down_arrow.svg";
 import messagesIcon from "./icons/messages.svg";
 import listIcon from "./icons/todo_list_icon.svg";
 import iphoneMobile from "./iphone_mobile.png";
+import complete_logo from "./complete_logo.png";
 import iphoneMobileDisplay from "./iphone_mobile_display.png";
 import mobileDisplay from "./mobile_display1.png";
 import two_mobiles from "./two_mobiles.png";
 import introVideo from "./videos/intro_video.png";
+
+import vero from "./partners/New folder/vero.png";
+import fixe from "./partners/New folder/fixe.png";
+import green_groom from "./partners/New folder/green_groom.png";
+import hilton from "./partners/New folder/hilton.png";
+import jumeirah from "./partners/New folder/jumeirah.png";
+import karma_kafe from "./partners/New folder/karma_kafe.png";
+import lock_stock from "./partners/New folder/lock_stock.png";
+import logs_embers from "./partners/New folder/logs_embers.png";
+import london_project from "./partners/New folder/london_project.png";
+import mccafertty from "./partners/New folder/mccafertty.png";
+import mecgatticans from "./partners/New folder/mecgatticans.png";
+import media_hotel from "./partners/New folder/media_hotel.png";
+import movenpick from "./partners/New folder/movenpick.png";
+import myagi from "./partners/New folder/myagi.png";
+import peaches_cream from "./partners/New folder/peaches_cream.png";
+import phileas_fogg from "./partners/New folder/phileas_fogg.png";
+import pure from "./partners/New folder/pure.png";
+import qwerty from "./partners/New folder/qwerty.png";
+import revier from "./partners/New folder/revier.png";
+import sals from "./partners/New folder/sals.png";
+import sucre from "./partners/New folder/sucre.png";
+import taj from "./partners/New folder/taj.png";
+import talk_restaurant from "./partners/New folder/talk_restaurant.png";
+import think_luxe from "./partners/New folder/think_luxe.png";
+import tidal_titans from "./partners/New folder/tidal_titans.png";
+import trader_vics from "./partners/New folder/trader_vics.png";
+import TT from "./partners/New folder/TT.png";
 
 export {
   banner1Image,
@@ -60,10 +89,10 @@ export {
   barasti,
   candy_pants,
   desert_barbell,
-  hilton,
+  // hilton,
   hospitality,
   jones,
-  lock_stock,
+  // lock_stock,
   play,
   mariott,
   meridien,
@@ -99,4 +128,34 @@ export {
   menu,
   down_arrow,
   up_arrow,
+  complete_logo,
+
+  // partners
+  vero,
+  fixe,
+  green_groom,
+  hilton,
+  jumeirah,
+  karma_kafe,
+  lock_stock,
+  logs_embers,
+  london_project,
+  mccafertty,
+  mecgatticans,
+  media_hotel,
+  movenpick,
+  myagi,
+  peaches_cream,
+  phileas_fogg,
+  pure,
+  qwerty,
+  revier,
+  sals,
+  sucre,
+  taj,
+  talk_restaurant,
+  think_luxe,
+  tidal_titans,
+  trader_vics,
+  TT,
 };

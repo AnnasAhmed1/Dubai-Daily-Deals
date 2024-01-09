@@ -1,20 +1,87 @@
 .logo_image {
-  width: 45px;
+  width: 140px;
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }
 
+@media (max-width: 576px) {
+  .logo_image {
+    width: 100px;
+    min-width: 80px;
+  }
+}
+
+.navbar.sticky1 {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 99;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation-duration: 0.3s;
+  animation-name: fadeInDown;
+  animation-timing-function: ease-out;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  transition: background-color 3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+}
+
+.navbar .nav_items_list {
+  gap: 18px;
+}
+@media (max-width: 992px) {
+  .navbar .nav_items_list {
+    gap: 15px;
+  }
+}
 .nav_item p {
-  color: var(--text-white);
   white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.nav_item {
+  transition: background-color 0.2s ease;
+  padding: 0px 10px;
 }
 
 .nav_item:hover {
-  background: var(--text-white);
+  background-color: var(--text-blue);
 }
 
 .nav_item:hover p {
-  color: var(--text-blue);
+  color: var(--text-white);
 }
 
+.header-section {
+  background: url("../assets/heading_bg.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 450px;
+}
+@media (max-width: 576px) {
+  .header-section {
+    min-height: 350px;
+  }
+}
 .iconCard {
   border-radius: 20px;
   padding: 20px 15px;
@@ -213,6 +280,9 @@
 
 .footerComp-input {
   padding-left: 20px;
+}
+.footerComp-input:focus {
+  outline: none;
 }
 
 @media (max-width: 576px) {

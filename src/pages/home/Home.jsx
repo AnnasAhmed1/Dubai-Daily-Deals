@@ -33,18 +33,14 @@ import DownloadAppButton from "../../components/helperComponents/button/Download
 import "../../styles/pages/home.css";
 import AppScreenshotSlider from "../../components/AppScreenshotSlider";
 import VideoComp from "../../components/video";
+import HeaderSectionLayout from "../../components/headerSection";
+import TestimonialSection from "../../components/testimonialSection";
 
 const Home = () => {
   return (
     <main>
-      <section
-        className="header-section"
-        id="home"
-        style={{
-          paddingBottom: "60px",
-        }}
-      >
-        <Navbar />
+      <Navbar />
+      <HeaderSectionLayout>
         <div className="container flex-responsive gap-10">
           <div
             className="flex-1 flex-col gap-20"
@@ -52,17 +48,19 @@ const Home = () => {
               paddingTop: "10px",
             }}
           >
-            <H1 color={"text-white"}>The standard Lorem Ipsum passage</H1>
+            <H1 color={"text-white"}>
+              Tried, Tested and Trusted deals across Dubai
+            </H1>
             <P5 color={"text-white"}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              Dubai Daily Deals: Your one-stop app for finding the best
+              lifestyle activities and in-house F&B deals in Dubai, soon
+              expanding to the entire UAE!
             </P5>
             <DownloadAppButton />
           </div>
           <ImageComp src={headerImage} className={"flex-1 home-head-image"} />
         </div>
-      </section>
+      </HeaderSectionLayout>
       <div className="container">
         <section className="main-section list-section flex-col gap-40" id="">
           <H2>
@@ -243,18 +241,13 @@ const Home = () => {
           <VideoComp />
         </section>
       </div>
-      <section className="main-section-b flex-col gap-40" id="reviews">
-        <div className="container">
-          <H1 textAlign={"center"}>Love of Our People</H1>
-          <P5 color={"text-light"} textAlign={"center"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </P5>
-        </div>
-        <TestimonialSlider />
-      </section>
+      <TestimonialSection
+        heading="Love of Our People"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+               minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+               aliquip ex ea commodo consequat."
+      />
       <section className="main-section get-app-section">
         <div
           className="container flex-responsive gap-50"
