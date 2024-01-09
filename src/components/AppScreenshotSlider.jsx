@@ -13,7 +13,7 @@ const AppScreenshotSlider = () => {
     autoplay: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: false,
+    // arrows: true,
     responsive: [
       {
         breakpoint: 576,
