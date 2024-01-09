@@ -266,18 +266,6 @@ const Member = () => {
         </section>
       </div>
 
-      <section className="main-section" id="reviews">
-        <div className="container">
-          <H1 textAlign={"center"}>Hear from our partners</H1>
-          <P5 color={"text-light"} textAlign={"center"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </P5>
-        </div>
-        <TestimonialSlider />
-      </section>
       <TestimonialSection
         heading="Hear from our partners"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -8,15 +8,17 @@ const ImageComp = ({
   style,
   imageStyle,
   className,
+  onClick,
 }) => {
   return (
     <div
       style={{
         width,
-        height, 
+        height,
         ...style,
       }}
       className={`imageComp ${className}`}
+      onClick={onClick}
     >
       <img
         style={{
@@ -25,7 +27,6 @@ const ImageComp = ({
         src={src}
         alt={alt ? alt : `${src}`}
         className="image"
-       
       />
     </div>
   );
