@@ -54,6 +54,10 @@ import {
   tidal_titans,
   trader_vics,
   TT,
+  punctualityIcon,
+  stopwatch,
+  listIcon_white,
+  matrix,
 } from "../../assets/asset";
 import HeaderSectionLayout from "../../components/headerSection";
 import TestimonialSection from "../../components/testimonialSection";
@@ -136,13 +140,39 @@ const Member = () => {
       setActive(index);
     }
   };
+  const gradientCardsData = [
+    {
+      icon: punctualityIcon,
+      heading: "Rank Online Organically",
+      details:
+        "Lorem Ipsum is simply dummy text of the printing It is a long established fact that will be distracted by the readable content. ",
+    },
+    {
+      icon: stopwatch,
+      heading: "Post Internal promotions in real time",
+      details:
+        "Lorem Ipsum is simply dummy text of the printing It is a long established fact that will be distracted by the readable content. ",
+    },
+    {
+      icon: listIcon_white,
+      heading: "Optimized for Search Engines",
+      details:
+        "Lorem Ipsum is simply dummy text of the printing It is a long established fact that will be distracted by the readable content. ",
+    },
+    {
+      icon: matrix,
+      heading: "Increase brand awareness",
+      details:
+        "Lorem Ipsum is simply dummy text of the printing It is a long established fact that will be distracted by the readable content. ",
+    },
+  ];
   return (
     <main>
       <Navbar home={false} />
       <HeaderSectionLayout id="about">
         <div className="container flex gap-0">
           <div
-            className="flex-1 flex-col gap-20"
+            className="flex-1 flex-col gap-20 members-header-text"
             style={{
               paddingTop: "10px",
             }}
@@ -172,10 +202,16 @@ const Member = () => {
               venue.
             </H2>
             <div className="qualities-section-cards gap-30">
-              <GradientIconCard />
-              <GradientIconCard />
-              <GradientIconCard />
-              <GradientIconCard />
+              {gradientCardsData?.map((data, index) => {
+                return (
+                  <GradientIconCard
+                    heading={data.heading}
+                    key={index}
+                    details={data.details}
+                    icon={data.icon}
+                  />
+                );
+              })}
             </div>
           </div>
           <ImageComp
@@ -201,7 +237,7 @@ const Member = () => {
               nulla pariatur
             </P6>
             <P6 color={"text-light"}>
-              orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
@@ -282,7 +318,7 @@ const Member = () => {
         <div className="container flex-col gap-40 items-center">
           <P3 color={"text-white"}>Get Free Trial</P3>
           <H1 color={"text-white"} textAlign={"center"}>
-            Become a Dubai Daily Deals' Partner Today!
+            Become a Partner today, get in touch to find out about our packages:
           </H1>
           <ButtonComp color={"pink-primary"}>Send Message</ButtonComp>
         </div>
