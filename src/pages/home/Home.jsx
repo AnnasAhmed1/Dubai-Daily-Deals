@@ -16,7 +16,13 @@ import IconCard from "../../components/IconCard";
 import ButtonComp from "../../components/helperComponents/button/ButtonComp";
 import { H1, H2, H3 } from "../../components/helperComponents/heading/heading";
 import ImageComp from "../../components/helperComponents/image/imageComp";
-import { two_mobiles } from "../../assets/asset";
+import {
+  listIcon_white,
+  matrix,
+  punctualityIcon,
+  stopwatch,
+  two_mobiles,
+} from "../../assets/asset";
 import {
   P4,
   P5,
@@ -37,6 +43,49 @@ import HeaderSectionLayout from "../../components/headerSection";
 import TestimonialSection from "../../components/testimonialSection";
 
 const Home = () => {
+  const iconCardsData = [
+    {
+      heading: "Seamless Exploration",
+      details:
+        "Discover Dubai's vibrant culinary scene, from breakfast to brunch, and uncover enticing happy hours and ladies' nights. Our app lets you effortlessly search and filter lifestyle activities and in-house F&B offerings.",
+    },
+    {
+      heading: "Diverse Lifestyle Choices",
+      details:
+        "Immerse yourself in a world of cool lifestyle options, ranging from pool days, spa experiences, and gym sessions to salon pampering, engaging activities, and luxurious staycations. Dubai Daily Deals caters to every taste and preference.",
+    },
+    {
+      heading: "Savings and Exclusive Experiences",
+      details:
+        "Designed for both tourists and residents, our app not only enhances your Dubai experience but also offers significant savings. Indulge in the finest restaurants, trendiest bars, and exclusive beach clubs, all while enjoying exclusive deals. Stay tuned for our upcoming expansion, covering the entire UAE!",
+    },
+  ];
+  const gradientCardsData = [
+    {
+      icon: punctualityIcon,
+      heading: "Designed for You",
+      details:
+        "Crafted by Dubai residents with a passion for the city, Dubai Daily Deals is meticulously designed to enhance your experience and unlock the best the city has to offer.",
+    },
+    {
+      icon: stopwatch,
+      heading: "Cross-Platform Compatibility",
+      details:
+        "Whether you're an iPhone user or on Android, our 100% FREE app is available on both platforms. Enjoy the convenience of seamless navigation and explore the vibrant offerings of Dubai effortlessly.",
+    },
+    {
+      icon: listIcon_white,
+      heading: "Your Ultimate Companion",
+      details:
+        "Dubai Daily Deals is not just an app; it's your ultimate companion for living and saving in Dubai. Download it now to access exclusive deals and dive into the heart of the city's diverse and dynamic experiences.",
+    },
+    {
+      icon: matrix,
+      heading: "Live, Save, Enjoy",
+      details:
+        "Start living your best life and saving simultaneously with Dubai Daily Deals. From dining to entertainment, this app has got you covered, ensuring you make the most of your time in Dubai.",
+    },
+  ];
   return (
     <main>
       <Navbar />
@@ -63,19 +112,14 @@ const Home = () => {
       </HeaderSectionLayout>
       <div className="container">
         <section className="main-section list-section flex-col gap-40" id="">
-          <H2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum
-            dolor sit amet,
-          </H2>
+          <H2>Dubai Daily Deals: Your Ultimate Lifestyle Companion</H2>
           <div className="list-section-cards gap-20">
-            {[1, 2, 3].map((_, index) => {
+            {iconCardsData?.map((data, index) => {
               return (
                 <IconCard
                   key={index}
-                  heading={"Lorem ipsum dolorsit amet, consectetur"}
-                  text={
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
-                  }
+                  heading={data.heading}
+                  text={data.details}
                   icon={listIcon}
                 />
               );
@@ -92,12 +136,18 @@ const Home = () => {
             }}
             className="flex-col gap-40"
           >
-            <H2>The standard Lorem Ipsum passage, used since the 1500s</H2>
+            <H2>Your Essential Lifestyle App</H2>
             <div className="qualities-section-cards gap-30">
-              <GradientIconCard />
-              <GradientIconCard />
-              <GradientIconCard />
-              <GradientIconCard />
+              {gradientCardsData?.map((data, index) => {
+                return (
+                  <GradientIconCard
+                    heading={data.heading}
+                    key={index}
+                    details={data.details}
+                    icon={data.icon}
+                  />
+                );
+              })}
             </div>
           </div>
           <ImageComp
@@ -120,11 +170,16 @@ const Home = () => {
           />
           <div className="features-section-text flex-col flex-1 gap-30">
             <RoundedLogo />
-            <H2>Features that aren't so commonplace.</H2>
+            <H2>About Us</H2>
             <P6 color={"text-light"}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              Dubai Daily Deals has its roots in the passion of its founder,
+              expat Sarah Jackson. Initially starting as a social media platform
+              on Instagram, Sarah shared her personal treasure trove of tried
+              and tested deals across Dubai. As a self-proclaimed aficionado of
+              a good deal and armed with over 16 years of firsthand Dubai
+              experience, Sarah's mission evolved into something bigger – she
+              wanted to make these incredible discoveries accessible to
+              everyone.
             </P6>
             <ButtonComp>Download App</ButtonComp>
           </div>
@@ -181,9 +236,6 @@ const Home = () => {
           className="app-screeshot-section-static"
           style={{
             display: "flex",
-            // width:"50%",
-            // paddingRight:"5%"
-            // alignItems: "center",
           }}
         >
           <div
@@ -191,8 +243,6 @@ const Home = () => {
             style={{
               height: "fit-content",
               margin: "auto",
-              // width: "100%",
-              // flex: 1,
             }}
           >
             <H3 color={"text-white"}>App Screenshots</H3>
@@ -209,27 +259,10 @@ const Home = () => {
             width={"130%"}
             style={{
               marginLeft: "-20px",
-              // marginRight: "30px",
             }}
-            imageStyle={
-              {
-                // width: "80%",
-                // marginRight: "auto",
-                // marginLeft: "0px",
-              }
-            }
           />
         </div>
-        <div
-          style={
-            {
-              // flex: "4",
-              // marginLeft:"-5%"
-              // display: "flex",
-            }
-          }
-          className="app-screenshots-images-slider"
-        >
+        <div className="app-screenshots-images-slider">
           <AppScreenshotSlider />
         </div>
       </section>

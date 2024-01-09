@@ -1,13 +1,29 @@
+.members-header-text {
+  max-width: 75%;
+}
+
 .partners-section .partners-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   padding: 0 20px;
   justify-content: center;
 }
 
 @media (max-width: 992px) {
   .partners-section .partners-cards {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0px;
+  }
+  .members-header-text {
+    max-width: 90%;
+  }
+}
+@media (max-width: 576px) {
+  .partners-section .partners-cards {
     grid-template-columns: repeat(3, 1fr);
     padding: 0px;
+  }
+  .members-header-text {
+    max-width: 100%;
   }
 }

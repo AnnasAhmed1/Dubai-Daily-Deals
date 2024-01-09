@@ -1,6 +1,7 @@
 import banner1Image from "./banner1_img.png";
 import featureBannerImage from "./feature_banner_img.png";
 import securityIcon from "./icons/security.svg";
+import stopwatch from "./icons/stopwatch.svg";
 import h25 from "./partners/25h.svg";
 import pedal_7 from "./partners/7_pedal.svg";
 import barasti from "./partners/barasti.svg";
@@ -40,10 +41,12 @@ import playstoreIcon from "./icons/playstore_icon.svg";
 import logo from "./icons/logo.svg";
 import headerImage from "./heading_banner_img.png";
 import clipboardIcon from "./icons/clipboard.svg";
+import matrix from "./icons/matrix.svg";
 import up_arrow from "./icons/up_arrow.svg";
 import down_arrow from "./icons/down_arrow.svg";
 import messagesIcon from "./icons/messages.svg";
 import listIcon from "./icons/todo_list_icon.svg";
+import listIcon_white from "./icons/to-do-list.svg";
 import iphoneMobile from "./iphone_mobile.png";
 import complete_logo from "./complete_logo.png";
 import iphoneMobileDisplay from "./iphone_mobile_display.png";
@@ -116,6 +119,7 @@ export {
   testimonialImage,
   appleIcon,
   playstoreIcon,
+  listIcon_white,
   logo,
   featureBannerImage,
   headerImage,
@@ -129,6 +133,8 @@ export {
   down_arrow,
   up_arrow,
   complete_logo,
+  stopwatch,
+  matrix,
 
   // partners
   vero,
